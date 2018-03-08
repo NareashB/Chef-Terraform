@@ -1,0 +1,648 @@
+{
+  "block_device": {
+    "loop0": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop1": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop2": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop3": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop4": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop5": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop6": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "loop7": {
+      "logical_block_size": "512",
+      "physical_block_size": "0",
+      "removable": "0",
+      "rotational": "1",
+      "size": "0"
+    },
+    "xvda1": {
+      "logical_block_size": "512",
+      "physical_block_size": "512",
+      "removable": "0",
+      "rotational": "0",
+      "size": "4194304"
+    }
+  },
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.0.118/lib",
+      "version": "13.0.118"
+    },
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.0.1/lib/ohai",
+      "version": "13.0.1"
+    }
+  },
+  "command": {
+    "ps": "ps -ef"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": 0,
+            "compressed": 0,
+            "drop": 0,
+            "errors": 0,
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": 0
+          },
+          "tx": {
+            "bytes": 0,
+            "carrier": 0,
+            "collisions": 0,
+            "compressed": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          }
+        },
+        "lo": {
+          "rx": {
+            "bytes": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          },
+          "tx": {
+            "bytes": 0,
+            "carrier": 0,
+            "collisions": 0,
+            "drop": 0,
+            "errors": 0,
+            "packets": 0,
+            "queuelen": "1"
+          }
+        }
+      }
+    }
+  },
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
+  },
+  "current_user": "fauxhai",
+  "dmi": {},
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
+    }
+  },
+  "filesystem": {
+    "by_device": {
+      "/dev/xvda1": {
+        "fs_type": "ext4",
+        "inodes_available": "98942",
+        "inodes_percent_used": "25%",
+        "inodes_used": "32130",
+        "kb_available": "1148588",
+        "kb_size": "2064208",
+        "kb_used": "894652",
+        "label": "/",
+        "mount_options": [
+          "rw",
+          "noatime"
+        ],
+        "mounts": [
+          "/"
+        ],
+        "percent_used": "44%",
+        "total_inodes": "131072",
+        "uuid": "94695e8e-6883-4426-b029-56f512314097"
+      },
+      "devpts": {
+        "fs_type": "devpts",
+        "mount_options": [
+          "rw",
+          "gid=5",
+          "mode=620"
+        ],
+        "mounts": [
+          "/dev/pts"
+        ]
+      },
+      "devtmpfs": {
+        "fs_type": "devtmpfs",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "size=294868k",
+          "nr_inodes=73717",
+          "mode=755"
+        ],
+        "mounts": [
+          "/dev"
+        ]
+      },
+      "none": {
+        "fs_type": "binfmt_misc",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/proc/sys/fs/binfmt_misc"
+        ]
+      },
+      "proc": {
+        "fs_type": "proc",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/proc"
+        ]
+      },
+      "rootfs": {
+        "fs_type": "rootfs",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/"
+        ]
+      },
+      "sysfs": {
+        "fs_type": "sysfs",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/sys"
+        ]
+      },
+      "tmpfs": {
+        "fs_type": "tmpfs",
+        "inodes_available": "76035",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "304144",
+        "kb_size": "304144",
+        "kb_used": "0",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/dev/shm"
+        ],
+        "percent_used": "0%",
+        "total_inodes": "76036"
+      }
+    },
+    "by_mountpoint": {
+      "/": {
+        "devices": [
+          "/dev/xvda1",
+          "rootfs"
+        ],
+        "fs_type": "rootfs",
+        "inodes_available": "98942",
+        "inodes_percent_used": "25%",
+        "inodes_used": "32130",
+        "kb_available": "1148588",
+        "kb_size": "2064208",
+        "kb_used": "894652",
+        "label": "/",
+        "mount_options": [
+          "rw"
+        ],
+        "percent_used": "44%",
+        "total_inodes": "131072",
+        "uuid": "94695e8e-6883-4426-b029-56f512314097"
+      },
+      "/dev": {
+        "devices": [
+          "devtmpfs"
+        ],
+        "fs_type": "devtmpfs",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "size=294868k",
+          "nr_inodes=73717",
+          "mode=755"
+        ]
+      },
+      "/dev/pts": {
+        "devices": [
+          "devpts"
+        ],
+        "fs_type": "devpts",
+        "mount_options": [
+          "rw",
+          "gid=5",
+          "mode=620"
+        ]
+      },
+      "/dev/shm": {
+        "devices": [
+          "tmpfs"
+        ],
+        "fs_type": "tmpfs",
+        "inodes_available": "76035",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "304144",
+        "kb_size": "304144",
+        "kb_used": "0",
+        "mount_options": [
+          "rw"
+        ],
+        "percent_used": "0%",
+        "total_inodes": "76036"
+      },
+      "/proc": {
+        "devices": [
+          "proc"
+        ],
+        "fs_type": "proc",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "/proc/sys/fs/binfmt_misc": {
+        "devices": [
+          "none"
+        ],
+        "fs_type": "binfmt_misc",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "/sys": {
+        "devices": [
+          "sysfs"
+        ],
+        "fs_type": "sysfs",
+        "mount_options": [
+          "rw"
+        ]
+      }
+    },
+    "by_pair": {
+      "/dev/xvda1,/": {
+        "device": "/dev/xvda1",
+        "fs_type": "ext4",
+        "inodes_available": "98942",
+        "inodes_percent_used": "25%",
+        "inodes_used": "32130",
+        "kb_available": "1148588",
+        "kb_size": "2064208",
+        "kb_used": "894652",
+        "label": "/",
+        "mount": "/",
+        "mount_options": [
+          "rw",
+          "noatime"
+        ],
+        "percent_used": "44%",
+        "total_inodes": "131072",
+        "uuid": "94695e8e-6883-4426-b029-56f512314097"
+      },
+      "devpts,/dev/pts": {
+        "device": "devpts",
+        "fs_type": "devpts",
+        "mount": "/dev/pts",
+        "mount_options": [
+          "rw",
+          "gid=5",
+          "mode=620"
+        ]
+      },
+      "devtmpfs,/dev": {
+        "device": "devtmpfs",
+        "fs_type": "devtmpfs",
+        "mount": "/dev",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "size=294868k",
+          "nr_inodes=73717",
+          "mode=755"
+        ]
+      },
+      "none,/proc/sys/fs/binfmt_misc": {
+        "device": "none",
+        "fs_type": "binfmt_misc",
+        "mount": "/proc/sys/fs/binfmt_misc",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "proc,/proc": {
+        "device": "proc",
+        "fs_type": "proc",
+        "mount": "/proc",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "rootfs,/": {
+        "device": "rootfs",
+        "fs_type": "rootfs",
+        "mount": "/",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "sysfs,/sys": {
+        "device": "sysfs",
+        "fs_type": "sysfs",
+        "mount": "/sys",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "tmpfs,/dev/shm": {
+        "device": "tmpfs",
+        "fs_type": "tmpfs",
+        "inodes_available": "76035",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "304144",
+        "kb_size": "304144",
+        "kb_used": "0",
+        "mount": "/dev/shm",
+        "mount_options": [
+          "rw"
+        ],
+        "percent_used": "0%",
+        "total_inodes": "76036"
+      }
+    }
+  },
+  "fips": {
+    "kernel": {
+      "enabled": false
+    }
+  },
+  "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
+  "idle": "30 days 15 hours 07 minutes 30 seconds",
+  "idletime_seconds": 2646450,
+  "init_package": "init",
+  "ipaddress": "10.0.0.2",
+  "kernel": {
+    "machine": "x86_64",
+    "modules": {
+      "aes_generic": {
+        "refcount": "2",
+        "size": "26955"
+      },
+      "aes_x86_64": {
+        "refcount": "1",
+        "size": "7814"
+      },
+      "aesni_intel": {
+        "refcount": "0",
+        "size": "44042"
+      },
+      "binfmt_misc": {
+        "refcount": "1",
+        "size": "7864"
+      },
+      "crc16": {
+        "refcount": "1",
+        "size": "1566"
+      },
+      "crc32c_intel": {
+        "refcount": "0",
+        "size": "2187"
+      },
+      "cryptd": {
+        "refcount": "2",
+        "size": "9319"
+      },
+      "dm_mod": {
+        "refcount": "0",
+        "size": "78538"
+      },
+      "ext4": {
+        "refcount": "1",
+        "size": "468843"
+      },
+      "ghash_clmulni_intel": {
+        "refcount": "0",
+        "size": "4437"
+      },
+      "ipv6": {
+        "refcount": "10",
+        "size": "329707"
+      },
+      "jbd2": {
+        "refcount": "1",
+        "size": "92431"
+      },
+      "mbcache": {
+        "refcount": "1",
+        "size": "7407"
+      },
+      "microcode": {
+        "refcount": "0",
+        "size": "12451"
+      },
+      "scsi_mod": {
+        "refcount": "0",
+        "size": "203562"
+      }
+    },
+    "name": "Linux",
+    "os": "GNU/Linux",
+    "processor": "x86_64",
+    "release": "3.4.73-64.112.amzn1.x86_64",
+    "version": "#1 SMP Tue Dec 10 01:50:05 UTC 2013"
+  },
+  "keys": {
+    "ssh": {
+      "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
+      "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
+    }
+  },
+  "languages": {
+    "powershell": null,
+    "ruby": {
+      "bin_dir": "/usr/local/bin",
+      "gem_bin": "/usr/local/bin/gem",
+      "gems_dir": "/usr/local/gems",
+      "ruby_bin": "/usr/local/bin/ruby"
+    }
+  },
+  "lsb": {},
+  "macaddress": "11:11:11:11:11:11",
+  "machinename": "Fauxhai",
+  "memory": {
+    "total": "1048576kB"
+  },
+  "network": {
+    "default_gateway": "10.0.0.1",
+    "default_interface": "eth0",
+    "interfaces": {
+      "eth0": {
+        "addresses": {
+          "10.0.0.2": {
+            "broadcast": "10.0.0.255",
+            "family": "inet",
+            "ip_scope": "RFC1918 PRIVATE",
+            "netmask": "255.255.255.0",
+            "prefixlen": "24",
+            "scope": "Global"
+          },
+          "11:11:11:11:11:11": {
+            "family": "lladdr"
+          },
+          "fe80::11:1111:1111:1111": {
+            "family": "inet6",
+            "ip_scope": "LINK LOCAL UNICAST",
+            "prefixlen": "64",
+            "scope": "Link",
+            "tags": []
+          }
+        },
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
+        "encapsulation": "Ethernet",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": "1500",
+        "number": "0",
+        "ring_params": {},
+        "routes": [
+          {
+            "destination": "default",
+            "family": "inet",
+            "via": "10.0.0.1"
+          },
+          {
+            "destination": "10.0.0.0/24",
+            "family": "inet",
+            "proto": "kernel",
+            "scope": "link",
+            "src": "10.0.0.2"
+          },
+          {
+            "destination": "fe80::/64",
+            "family": "inet6",
+            "metric": "256",
+            "proto": "kernel"
+          }
+        ],
+        "state": "up",
+        "type": "eth"
+      },
+      "lo": {
+        "addresses": {
+          "127.0.0.1": {
+            "family": "inet",
+            "ip_scope": "LOOPBACK",
+            "netmask": "255.0.0.0",
+            "prefixlen": "8",
+            "scope": "Node"
+          },
+          "::1": {
+            "family": "inet6",
+            "ip_scope": "LINK LOCAL LOOPBACK",
+            "prefixlen": "128",
+            "scope": "Node",
+            "tags": []
+          }
+        },
+        "encapsulation": "Loopback",
+        "flags": [
+          "LOOPBACK",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": "65536",
+        "state": "unknown"
+      }
+    }
+  },
+  "ohai_time": 1492225896.5054057,
+  "os": "linux",
+  "os_version": "3.4.73-64.112.amzn1.x86_64",
+  "packages": {},
+  "platform": "amazon",
+  "platform_family": "amazon",
+  "platform_version": "2013.09",
+  "root_group": "root",
+  "shells": [
+    "/bin/sh",
+    "/bin/bash",
+    "/sbin/nologin",
+    "/bin/dash"
+  ],
+  "time": {
+    "timezone": "GMT"
+  },
+  "uptime": "30 days 15 hours 07 minutes 30 seconds",
+  "uptime_seconds": 2646450,
+  "virtualization": {
+    "systems": {}
+  }
+}

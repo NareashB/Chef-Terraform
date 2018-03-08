@@ -1,0 +1,20 @@
+language: ruby
+cache: bundler
+sudo: false
+
+rvm:
+  - 2.1.9
+  - 2.2.6
+  - 2.3.3
+
+branches:
+  only:
+    - master
+
+bundler_args: --jobs 7
+
+before_script:
+  - git config --global user.email "ci@traivs-ci.org"
+  - git config --global user.name "Travis CI"
+
+script: bundle exec rake

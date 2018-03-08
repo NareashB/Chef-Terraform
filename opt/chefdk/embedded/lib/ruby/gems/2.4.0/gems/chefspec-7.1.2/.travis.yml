@@ -1,0 +1,40 @@
+language: ruby
+cache: bundler
+sudo: false
+
+before_install:
+  - gem install bundler
+  - bundle --version
+  - gem update --system
+  - gem --version
+
+branches:
+  only:
+    - master
+
+bundler_args: --jobs 7 --retry 3
+
+matrix:
+  include:
+    - env: CHEF_VERSION=master
+      rvm: 2.5.0
+    - env: CHEF_VERSION=13.8.3
+      rvm: 2.4.3
+    - env: CHEF_VERSION=13.7.16
+      rvm: 2.4.3
+    - env: CHEF_VERSION=13.6.4
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.5.3
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.4.24
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.3.42
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.2.20
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.1.31
+      rvm: 2.4.2
+    - env: CHEF_VERSION=13.0.118
+      rvm: 2.4.2
+    - env: CHEF_VERSION=12.21.31
+      rvm: 2.3.5

@@ -1,0 +1,6 @@
+rvm:
+  - 2.0.0
+
+gemfile: ci.gemfile
+
+script: bundle exec rake spec

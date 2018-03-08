@@ -1,0 +1,15 @@
+FC009: Resource attribute not recognised: ./recipes/epel.rb:27
+FC038: Invalid resource action: ./recipes/epel.rb:27
+FC043: Prefer new notification syntax: ./providers/key.rb:60
+FC043: Prefer new notification syntax: ./providers/repository.rb:94
+FC064: Ensure issues_url is set in metadata: ./metadata.rb:1
+FC065: Ensure source_url is set in metadata: ./metadata.rb:1
+FC066: Ensure chef_version is set in metadata: ./metadata.rb:1
+FC069: Ensure standardized license defined in metadata: ./metadata.rb:1
+FC072: Metadata should not contain "attribute" keyword: ./metadata.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/key.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/repository.rb:1
+FC078: Ensure cookbook shared under an OSI-approved open source license: ./metadata.rb:1
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/key.rb:76
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/repository.rb:41
+FC104: Use the :run action in ruby_block instead of :create: ./providers/repository.rb:94

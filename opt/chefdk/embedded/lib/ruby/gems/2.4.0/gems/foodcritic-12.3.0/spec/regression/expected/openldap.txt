@@ -1,0 +1,12 @@
+FC043: Prefer new notification syntax: ./recipes/auth.rb:46
+FC043: Prefer new notification syntax: ./recipes/auth.rb:56
+FC043: Prefer new notification syntax: ./recipes/server.rb:71
+FC043: Prefer new notification syntax: ./recipes/server.rb:78
+FC043: Prefer new notification syntax: ./recipes/server.rb:97
+FC064: Ensure issues_url is set in metadata: ./metadata.rb:1
+FC065: Ensure source_url is set in metadata: ./metadata.rb:1
+FC066: Ensure chef_version is set in metadata: ./metadata.rb:1
+FC069: Ensure standardized license defined in metadata: ./metadata.rb:1
+FC072: Metadata should not contain "attribute" keyword: ./metadata.rb:1
+FC075: Cookbook uses node.save to save partial node data to the chef-server mid-run: ./recipes/slave.rb:28
+FC078: Ensure cookbook shared under an OSI-approved open source license: ./metadata.rb:1

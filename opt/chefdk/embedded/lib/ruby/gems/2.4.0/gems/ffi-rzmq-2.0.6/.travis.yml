@@ -1,0 +1,14 @@
+script: ./travis_build_script.sh
+language: ruby
+rvm:
+  - 2.4.0
+  - ruby-head
+  - jruby
+  - jruby-head
+  - rbx
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
+    - rvm: rbx

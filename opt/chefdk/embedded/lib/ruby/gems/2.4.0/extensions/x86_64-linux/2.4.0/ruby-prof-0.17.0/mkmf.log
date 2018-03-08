@@ -1,0 +1,542 @@
+have_func: checking for rb_gc_stat()... -------------------- yes
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_stat; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_count()... -------------------- yes
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_count; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_remove_event_hook_with_data()... -------------------- yes
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_remove_event_hook_with_data’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_remove_event_hook_with_data; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_remove_event_hook_with_data; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_remove_event_hook_with_data();
+14: int t(void) { rb_remove_event_hook_with_data(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_os_allocated_objects()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_os_allocated_objects’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_os_allocated_objects; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_os_allocated_objects; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/cc6ZoAxF.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_os_allocated_objects'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_os_allocated_objects();
+14: int t(void) { rb_os_allocated_objects(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_allocated_size()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_allocated_size’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_allocated_size; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_allocated_size; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/ccyKsHCL.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_allocated_size'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_allocated_size();
+14: int t(void) { rb_gc_allocated_size(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_collections()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_collections’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_collections; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_collections; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/cci9FE8U.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_collections'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_collections();
+14: int t(void) { rb_gc_collections(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_time()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_time’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_time; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_time; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/ccLTewT5.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_time'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_time();
+14: int t(void) { rb_gc_time(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_total_time()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_total_time’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_time; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_time; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/cctdgEVb.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_total_time'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_total_time();
+14: int t(void) { rb_gc_total_time(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_total_mallocs()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_total_mallocs’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_mallocs; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_mallocs; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/ccxIDWzn.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_total_mallocs'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_total_mallocs();
+14: int t(void) { rb_gc_total_mallocs(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_total_malloced_bytes()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_total_malloced_bytes’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_malloced_bytes; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_total_malloced_bytes; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/cc1kvpOt.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_total_malloced_bytes'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_total_malloced_bytes();
+14: int t(void) { rb_gc_total_malloced_bytes(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_heap_total_mem()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_heap_total_mem’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_heap_total_mem; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_heap_total_mem; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/cctYnhDE.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_heap_total_mem'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_heap_total_mem();
+14: int t(void) { rb_heap_total_mem(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_heap_info()... -------------------- no
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘rb_gc_heap_info’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_heap_info; return !p; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_heap_info; return !p; }
+/* end */
+
+"gcc -o conftest -I/opt/chefdk/embedded/include/ruby-2.4.0/x86_64-linux -I/opt/chefdk/embedded/include/ruby-2.4.0/ruby/backward -I/opt/chefdk/embedded/include/ruby-2.4.0 -I. -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -I/opt/chefdk/embedded/include   -I/opt/chefdk/embedded/include -O2 -O3 -g -pipe -fPIC -std=c99 conftest.c  -L. -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -Wl,-rpath,/opt/chefdk/embedded/lib -L. -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -fstack-protector -rdynamic -Wl,-export-dynamic -L/opt/chefdk/embedded/lib  -Wl,-rpath,/opt/chefdk/embedded/lib     -Wl,-rpath,/opt/chefdk/embedded/lib -L/opt/chefdk/embedded/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+/tmp/ccLe6krD.o: In function `t':
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ruby-prof-0.17.0/ext/ruby_prof/conftest.c:14: undefined reference to `rb_gc_heap_info'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void rb_gc_heap_info();
+14: int t(void) { rb_gc_heap_info(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,15 @@
+current directory: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/opt/chefdk/embedded/bin/ruby -r ./siteconf20180307-10306-rmkckh.rb extconf.rb
+creating Makefile
+
+current directory: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20180307-10306-o5e7wc

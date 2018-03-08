@@ -1,0 +1,35 @@
+FC002: Avoid string interpolation where not required: ./libraries/registry_helper.rb:99
+FC002: Avoid string interpolation where not required: ./libraries/registry_helper.rb:173
+FC002: Avoid string interpolation where not required: ./libraries/windows_privileged.rb:42
+FC002: Avoid string interpolation where not required: ./libraries/windows_privileged.rb:56
+FC018: LWRP uses deprecated notification syntax: ./providers/shortcut.rb:54
+FC048: Prefer Mixlib::ShellOut: ./providers/task.rb:106
+FC064: Ensure issues_url is set in metadata: ./metadata.rb:1
+FC065: Ensure source_url is set in metadata: ./metadata.rb:1
+FC066: Ensure chef_version is set in metadata: ./metadata.rb:1
+FC069: Ensure standardized license defined in metadata: ./metadata.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/auto_run.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/batch.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/feature.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/package.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/path.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/reboot.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/registry.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/shortcut.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/task.rb:1
+FC074: LWRP should use DSL to define resource's default action: ./resources/zipfile.rb:1
+FC078: Ensure cookbook shared under an OSI-approved open source license: ./metadata.rb:1
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./libraries/feature_base.rb:9
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./libraries/feature_base.rb:19
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/batch.rb:42
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/package.rb:48
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/package.rb:59
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/package.rb:68
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/pagefile.rb:63
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/pagefile.rb:75
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/registry.rb:70
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/task.rb:38
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/task.rb:50
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/task.rb:68
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/task.rb:79
+FC085: Resource using new_resource.updated_by_last_action to converge resource: ./providers/zipfile.rb:41

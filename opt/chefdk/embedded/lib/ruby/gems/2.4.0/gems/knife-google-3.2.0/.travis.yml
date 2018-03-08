@@ -1,0 +1,23 @@
+language: ruby
+cache: bundler
+dist: trusty
+sudo: false
+rvm:
+  - 2.2.7
+  - 2.3.4
+  - 2.4.1
+  - ruby-head
+  
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
+branches:
+  only:
+  - master
+notifications:
+  slack:
+    on_success: change
+    on_failure: always
+    rooms:
+      secure: ml+Ph8FuoU4TgEqGmjERaF5peoNTRhllG5rBFDUgGxPCKRxE9snYDwc+29RAhA7izlaUABIA3fWT11SdF2RMTUorsrz0PbYtyBZuI9AKloww1CUFMl2kr8+DRt/AzMcGYs8OgQW12NLNNRV72X4wUKsJXpazVHsXctU/Fh/AqX0=
