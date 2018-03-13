@@ -9,7 +9,7 @@ resource "aws_instance" "Terraform_training" {
         instance_type = "t2.micro"
         key_name = "nareash"
    
-user_data              = "${file("userdata.sh")}"
+user_data              = "${file("Nuserdata.sh")}"
         tags {
          Name = "Nchefsolo"
         }
