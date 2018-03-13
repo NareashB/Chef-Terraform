@@ -1,0 +1,44 @@
+{
+  "name": "java_se",
+  "description": "Installs Oracle's Java SE JDK",
+  "long_description": "# Java SE Cookbook\n\n[![Cookbook Version](http://img.shields.io/cookbook/v/java_se.svg?style=flat-square)][cookbook]\n[![linux](http://img.shields.io/travis/dhoer/chef-java_se/master.svg?label=linux&style=flat-square)][linux]\n[![osx](http://img.shields.io/travis/dhoer/chef-java_se/macosx.svg?label=macosx&style=flat-square)][osx]\n[![win](https://img.shields.io/appveyor/ci/dhoer/chef-java-se/master.svg?label=windows&style=flat-square)][win]\n\n[cookbook]: https://supermarket.chef.io/cookbooks/java_se\n[linux]: https://travis-ci.org/dhoer/chef-java_se\n[osx]: https://travis-ci.org/dhoer/chef-java_se/branches\n[win]: https://ci.appveyor.com/project/dhoer/chef-java-se \n\nInstalls and configures Oracle's\n[Java SE JDK 9](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html).\n\nSee [Critical Patch Updates](http://www.oracle.com/technetwork/topics/security/alerts-086861.html)\nfor next scheduled JDK release.\n\n## Requirements\n\n- Chef 11+\n\n### Platforms\n\n- CentOS, Red Hat, Fedora\n- Debian, Ubuntu\n- Mac OS X\n- Windows\n\n## Usage\n\nBy adding java_se to a run list or cookbook you are accepting the\n[Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html). \n\nOlder versions of Java JDK are no longer publicly available\nafter a patch update. So it is recommended that you\n[download JDK from alternative location](https://github.com/dhoer/chef-java_se#download-jdk-from-alternative-location),\nor [constrain java_se cookbook version](https://github.com/dhoer/chef-java_se#constrain-java_se-cookbook-version).\nNote that the latter solution could result in a failed converge when\na new patch update is released and a matching version of java_se\ncookbook is not yet available.  A release of java_se cookbook usually\nfollows within a day after a patch update.\n\nWindows JAVA_HOME and PATH environment variables are not available\nduring initial chef-client run. Attribute\n`node['java_se']['win_javalink']` provides a symbolic link to installed\nJava JDK bin directory and is available during initial chef-client run.\n\n### Examples\n\n#### Download JDK from alternative location\n\nThis will download the JDK that best matches platform criteria. Note that JDK file names must be the\nsame as that found on Oracle's download page.\n\nA script to download JDKs from Oracle and upload them to Amazon S3 is\navailable [here](https://github.com/dhoer/chef-java_se/wiki/Populate-S3-with-JDKs).\n\n```ruby\noverride_attributes(\n  \"java_se\": {\n    \"uri\": \"https://s3.amazonaws.com/mybucket/java\"\n  }\n)\n```\n\n#### Constrain java_se cookbook version\n\n[Constrain](https://docs.chef.io/cookbook_versions.html#constraints)\nversion in cookbook to latest Java SE JDK 9.\n\n```ruby\ndepends 'java_se', '~> 9.0'\n```\n\nConstrain version in\n[environment](https://docs.chef.io/cookbook_versions.html#environments)\nto latest Java SE JDK 9.\n\n```ruby\ncookbook 'java_se', '~> 9.0'\n```\n\n### Attributes\n\n- `node['java_se']['uri']` - The URI to the Java SE JDKs. If a directory is provided, it will then automatically\nassign a file name that best matches platform criteria.  The JDK file names must be the same as that found on\nOracle's download page. Leave nil to download directly from Oracle. Default `nil`.\n- `node['java_se']['skip']` - Skips installing Java SE. Default `false`.\n- `node['java_se']['java_home']` - Alternative java_home location. Leave nil to use default location. For Linux\nand Windows only. Default `nil`.\n\n#### Linux Only\n- `node['java_se']['set_default']` - Indicates whether or not you want the JDK installed to be default on the\nsystem. Default `true`.                \n- `node['java_se']['owner']` - The owner of extracted directory. Default `root`.\n- `node['java_se']['group']` - The group of extracted directory. Default `root`.\n- `node['java_se']['alternatives_priority']` - A priority of the alternatives. Default `1061`.\n- `node['java_se']['set_etc_environment']` - Optionally sets JAVA_HOME in /etc/environment for. Default `false`.\n- `node['java_se']['reset_alternatives']` - Whether alternatives is reset. Default `true`.  \n- `node['java_se']['use_alt_suffix']` whether '_alt' suffix is used for none default java install. Default `false`.\n- `node['java_se']['bin_cmds']` -  Array of binary commands to symlink /usr/bin to, and set alternative on.  Examples\nare mvn, java, javac, etc. These cmds must be in the bin subdirectory of the extracted folder. Will be ignored if\nset_default is not true.\n\n#### Windows Only\n- `node['java_se']['win_addlocal']` - JDK features to install. Default `ToolsFeature,SourceFeature,PublicjreFeature`.\n- `node['java_se']['win_javalink']` - Symbolic link to Java JDK bin directory. Since Windows PATH and JAVA_HOME\nare not available during chef-client run, this provides a way for cookbooks to access the latest installed\nversion. Default `%SYSTEMDRIVE%\\java\\bin`.\n- `node['java_se']['win_jre_home']` - Location to install public JRE. Leave nil to use default location. Default `nil`.\n\n#### Bind (Do not override) \n- `node['java_se']['release']` - The JDK release version.\n- `node['java_se']['build']` - The build number.\n- `node['java_se']['sha256'][type]` - The checksum to validate the installer with. Where `type` is one of 'dmg', \n'exe', or 'tar'.\n\n## Getting Help\n\n- Ask specific questions on\n[Stack Overflow](http://stackoverflow.com/questions/tagged/chef+java).\n- Report bugs and discuss potential features in\n[Github issues](https://github.com/dhoer/chef-java_se/issues).\n\n## Contributing\n\nPlease refer to\n[CONTRIBUTING](https://github.com/dhoer/chef-java_se/blob/master/CONTRIBUTING.md).\n\n## License\n\nMIT - see the accompanying\n[LICENSE](https://github.com/dhoer/chef-java_se/blob/master/LICENSE.md)\nfile for details.\n",
+  "maintainer": "Dennis Hoer",
+  "maintainer_email": "dennis.hoer@gmail.com",
+  "license": "MIT",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "mac_os_x": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "windows": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "providing": {
+
+  },
+  "attributes": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "9.0.4",
+  "source_url": "https://github.com/dhoer/chef-java_se",
+  "issues_url": "https://github.com/dhoer/chef-java_se/issues",
+  "privacy": false,
+  "chef_versions": [
+    [
+      ">= 11.0"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
