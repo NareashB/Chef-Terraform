@@ -1,9 +1,3 @@
-provider "aws" {
-        access_key = "AKIAIT6TLZFEPQ6KLCGQ"
-        secret_key = "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"
-        region = "ca-central-1"
-}
-
 resource "aws_instance" "Terraform_training" {
         ami = "ami-ae55d2ca"
         instance_type = "t2.micro"
