@@ -106,10 +106,14 @@
         "builddate": "Jan 31 2018, 00:17:36"
       },
       "java": {
-        "version": "1.7.0_161",
+        "version": "9.0.4",
+        "runtime": {
+          "name": "Java(TM) SE Runtime Environment",
+          "build": "9.0.4+11"
+        },
         "hotspot": {
-          "name": "OpenJDK 64-Bit Server VM",
-          "build": "24.161-b00, mixed mode"
+          "name": "Java HotSpot(TM) 64-Bit Server VM",
+          "build": "9.0.4+11, mixed mode"
         }
       },
       "c": {
@@ -386,16 +390,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "6433014",
-              "packets": "88809",
+              "bytes": "37078066",
+              "packets": "530177",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "285530061",
-              "packets": "201533",
+              "bytes": "1809739977",
+              "packets": "1237223",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -502,24 +506,24 @@
         "surplus": "0"
       },
       "total": "1017092kB",
-      "free": "158584kB",
-      "available": "695812kB",
-      "buffers": "97656kB",
-      "cached": "476264kB",
-      "active": "371264kB",
-      "inactive": "306756kB",
-      "dirty": "44kB",
+      "free": "92436kB",
+      "available": "698640kB",
+      "buffers": "119240kB",
+      "cached": "523604kB",
+      "active": "399716kB",
+      "inactive": "345152kB",
+      "dirty": "14392kB",
       "writeback": "0kB",
-      "anon_pages": "104096kB",
-      "mapped": "28920kB",
-      "slab": "161556kB",
-      "slab_reclaimable": "147484kB",
-      "slab_unreclaim": "14072kB",
-      "page_tables": "6976kB",
+      "anon_pages": "102012kB",
+      "mapped": "20784kB",
+      "slab": "159584kB",
+      "slab_reclaimable": "147544kB",
+      "slab_unreclaim": "12040kB",
+      "page_tables": "7896kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "508544kB",
-      "committed_as": "308272kB",
+      "committed_as": "308080kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "0kB",
       "vmalloc_chunk": "0kB",
@@ -575,13 +579,13 @@
         },
         "/dev/xvda1": {
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -685,13 +689,13 @@
         },
         "/": {
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -789,14 +793,14 @@
         "/dev/xvda1,/": {
           "device": "/dev/xvda1",
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "mount": "/",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -893,13 +897,13 @@
         },
         "/dev/xvda1": {
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -1003,13 +1007,13 @@
         },
         "/": {
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -1107,14 +1111,14 @@
         "/dev/xvda1,/": {
           "device": "/dev/xvda1",
           "kb_size": "8123812",
-          "kb_used": "2368548",
-          "kb_available": "5655016",
-          "percent_used": "30%",
+          "kb_used": "3500440",
+          "kb_available": "4523124",
+          "percent_used": "44%",
           "mount": "/",
           "total_inodes": "524288",
-          "inodes_used": "130888",
-          "inodes_available": "393400",
-          "inodes_percent_used": "25%",
+          "inodes_used": "133545",
+          "inodes_available": "390743",
+          "inodes_percent_used": "26%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -1186,22 +1190,22 @@
         "host_dsa_public": "AAAAB3NzaC1kc3MAAACBALFt+ygb9wy9Yol93kNSHsofmBk8BblAtGPxP9hVqvf/sDFCKxqhKy0TENofxMKQ7VsN/RAocL8q8pq06rz0/n8grB4sRs8Qg1Ot8j0qldFciGv0qWVbgMlKFHzJRmadscS+PJ5DoL/24NuD9maZOINORzqFFZtYhl6GrXGVZugVAAAAFQDmj6RKslXkFLshxX9/ImJoj8n1AwAAAIEAqA/1oqExhMfE5akNNRXCMpgLSCWLSizwYj0+K6KmPsHA9XxMAVAIYFgfU1a9jPwzQQ5QUC4qA0nRdWU5dzTVAaqITc7RykDo0f0fkgDMHkGHCHfegE6NEKTFfZkf3fkCoPws4THOUw4hSTeN0K0ACoRvxGlCzdjnKx/CEhIuph4AAACAXkE+S0wDEWaISdsJy+F7s7ojp+VMsdMQX5tB415+3ZUydZWylqZigXQpr8sRiwlIHIqkVmt9r0cwvOBSelv8oMRwDhxGCRcTrclIogdLXU9wxlvfsAKj7FtrBTIyZXFAI4JkGVeubKZKu5kJpokYw91mFRsJWoT9+jm8ZoowIqw="
       }
     },
-    "ohai_time": 1520926237.0141132,
+    "ohai_time": 1520938604.0110645,
     "chef_packages": {
       "ohai": {
         "version": "13.8.0",
-        "ohai_root": "/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.8.0/lib/ohai"
+        "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.8.0/lib/ohai"
       },
       "chef": {
         "version": "13.8.5",
-        "chef_root": "/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.8.5/lib"
+        "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.8.5/lib"
       }
     },
     "root_group": "root",
-    "uptime_seconds": 3814,
-    "uptime": "1 hours 03 minutes 34 seconds",
-    "idletime_seconds": 3695,
-    "idletime": "1 hours 01 minutes 35 seconds",
+    "uptime_seconds": 16181,
+    "uptime": "4 hours 29 minutes 41 seconds",
+    "idletime_seconds": 15897,
+    "idletime": "4 hours 24 minutes 57 seconds",
     "pci": {
       "00:00.0": {
         "class_name": "Host bridge",
@@ -1842,6 +1846,13 @@
         "version": "2.6.3",
         "release": "9.3.amzn1",
         "installdate": "1516041782",
+        "arch": "x86_64"
+      },
+      "chef": {
+        "epoch": "0",
+        "version": "13.8.5",
+        "release": "1.el6",
+        "installdate": "1520938600",
         "arch": "x86_64"
       },
       "aws-apitools-elb": {
@@ -2913,13 +2924,6 @@
         "version": "173",
         "release": "4.13.amzn1",
         "installdate": "1516041757",
-        "arch": "x86_64"
-      },
-      "chef": {
-        "epoch": "0",
-        "version": "13.8.5",
-        "release": "1.el6",
-        "installdate": "1520922555",
         "arch": "x86_64"
       },
       "libacl": {
@@ -4730,7 +4734,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 38186,
+      "_AVPHYS_PAGES": 21695,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 254273,
@@ -4987,23 +4991,30 @@
       "RAW_SOCKETS": 200809
     },
     "recipes": [
+      "ntp",
+      "ntp::default",
       "java_se",
       "java_se::default",
       "java_se::_linux_install"
     ],
     "expanded_run_list": [
+      "ntp::default",
       "java_se::default"
     ],
     "roles": [
 
     ],
     "cookbooks": {
+      "ntp": {
+        "version": "0.1.0"
+      },
       "java_se": {
         "version": "9.0.4"
       }
     }
   },
   "run_list": [
+    "recipe[ntp]",
     "recipe[java_se]"
   ]
 }

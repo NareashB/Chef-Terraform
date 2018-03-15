@@ -7,9 +7,9 @@ provider "aws" {
 resource "aws_instance" "Terraform_training" {
         ami = "ami-ae55d2ca"
         instance_type = "t2.micro"
-        key_name = "nareash"
+        key_name = "Vidhur"
    
-user_data              = "${file("Nuserdata.sh")}"
+user_data = "${file("Nuserdata.sh")}"
         tags {
          Name = "Nchefsolo"
         }
