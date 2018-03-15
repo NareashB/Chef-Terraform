@@ -263,7 +263,7 @@ resource "aws_security_group" "APIGWSG" {
         cidr_blocks = ["${var.SourceCidrForRDP}"]
     }    
 
-f    vpc_id = "${aws_vpc.VPC.id}"
+    vpc_id = "${aws_vpc.VPC.id}"
 
     tags {
         "Name" = "${var.orgName}"
@@ -332,7 +332,7 @@ resource "aws_instance" "BastionHost" {
 	"Description" = "Terraform Testing instance"
 	"Type" = "FinOS Bastion"
 	}
-	user_data = "${file("userdata.sh")}"	
+	user_data = "${file("Nuserdata.sh")}"	
 }
 output "address" {
   value = "${aws_instance.BastionHost.public_dns}"
