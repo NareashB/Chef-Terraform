@@ -5,6 +5,17 @@ provider "aws" {
 }
 terraform {
   backend "local" {}
+=======
+resource "aws_instance" "Terraform_training" {
+        ami = "ami-ae55d2ca"
+        instance_type = "t2.micro"
+        key_name = "nareash"
+   
+user_data              = "${file("Nuserdata.sh")}"
+        tags {
+         Name = "Nchefsolo"
+        }
+>>>>>>> f56438f51de30a27644f6e0a89e8d2d2f6a88592
 }
 resource "aws_vpc" "VPC" {
 
