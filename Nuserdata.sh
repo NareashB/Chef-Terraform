@@ -6,7 +6,7 @@ yum install wget -y
 yum install git -y
 echo  "installation of git has been completed"
 local_path="/root/chef_repository/chef/chef-repo"
-git clone https://github.com/duddumounika/chef_repository.git
+git clone https:https://github.com/NareashB/Chef-Terraform.git
 echo "cloning from github repository"
 [ -f chefdk-2.5.3-1.el7.x86_64.rpm ] && echo "chef is already installed" || \
 (
